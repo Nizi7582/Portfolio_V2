@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "welcome": "Welcome to my universe",
+    "im": "I'm",
+    "description": "Crafting digital experiences that merge elegant design with robust engineering. Passionate about building scalable web applications and exploring the future of tech.",
+    "resume": "Check my Resume"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "A sneak peek into my life and passions.",
+    "stats": {
+      "location": "French developer",
+      "locationSub": "Ready to code",
+      "age": "19 years old",
+      "ageSub": "Age",
+      "games": "Games lovers",
+      "gamesSub": "Level Up",
+      "tech": "Tech Stack",
+      "techSub": "Vue / Nuxt / Tailwind"
+    },
+    "passionTitle": "My Passion",
+    "passion1": "I'm a 21's years old guy living in France. I was always interested in IT, but decided to make it my life after discovering the web universe.",
+    "passion2": "Ready to learn anything to reach the best possible result. Known as cheerful, i always seek the fun in everything",
+    "greeting": "Hello! 👋"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "A selection of my recent works and experiments.",
+    "preview": "Preview"
+  },
+  "footer": {
+    "copyright": "Built with Passion & Nuxt 3."
+  },
+  "nav": {
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "close": "Close",
+    "viewProject": "View Project",
+    "escTroll": "You really thought the ESC key worked to close the menu? Well too bad, stick with your mouse."
+  }
+}

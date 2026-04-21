@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #10b981; /* Emerald-500 */
+  --accent-glow: rgba(16, 185, 129, 0.5);
+  --bg-deep: #0f172a; /* Slate-900 */
+  --bg-card: rgba(30, 41, 59, 0.7); /* Slate-800 with opacity */
+}
+
+@layer base {
+  body {
+    @apply bg-[#0f172a] text-slate-200 selection:bg-emerald-500/30 font-mono tracking-wide;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-bold tracking-tight text-white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-slate-900/60 backdrop-blur-sm border border-emerald-500/30 relative;
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card:hover {
+    @apply border-emerald-400 bg-emerald-900/20;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.1) inset;
+    transform: translateY(-2px);
+  }
+
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center px-6 py-3 font-mono font-bold tracking-widest text-emerald-400 uppercase transition-all duration-300 bg-slate-900/80 border border-emerald-500 hover:bg-emerald-400 hover:text-slate-900 hover:shadow-[0_0_15px_rgba(52,211,153,0.5)] focus:outline-none;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 rounded-full hover:bg-emerald-600 transition-colors;
+}
