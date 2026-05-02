@@ -1,10 +1,31 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref, nextTick, watch } from 'vue'
 import { Star } from 'lucide-vue-next'
+import Lenis from 'lenis'
 
 const staticStars = ref([])
+let lenis = null
 
-onMounted(() => {
+onMounted(async () => {
+  // Global Lenis Smooth Scroll Init
+  lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+    touchMultiplier: 2
+  })
+
+  const { gsap } = await import('gsap')
+  const { ScrollTrigger } = await import('gsap/ScrollTrigger')
+  gsap.registerPlugin(ScrollTrigger)
+  
+  lenis.on('scroll', ScrollTrigger.update)
+  const updateLenis = (time) => { lenis.raf(time * 1000) }
+  gsap.ticker.add(updateLenis)
+  gsap.ticker.lagSmoothing(0)
+  
+  lenis._updateLenis = updateLenis
+
   // Setup SVG stars
   staticStars.value = Array.from({ length: 12 }).map(() => ({
     top: `${Math.random() * 100}%`,
@@ -58,6 +79,44 @@ onMounted(() => {
     animationFrameId = requestAnimationFrame(render)
   }
   render()
+})
+
+// Watch route changes to manage scroll behavior
+const route = useRoute()
+watch(() => route.fullPath, (newPath, oldPath) => {
+  // If we change path or change language (fullPath changes), scroll to top
+  // unless there is a hash
+  if (!route.hash) {
+    nextTick(() => {
+      if (lenis) {
+        lenis.scrollTo(0, { immediate: true })
+      }
+      import('gsap/ScrollTrigger').then(({ ScrollTrigger }) => {
+        ScrollTrigger.refresh()
+      })
+    })
+  }
+}, { immediate: true })
+
+// Handle hash changes separately
+watch(() => route.hash, (newHash) => {
+  if (newHash && lenis) {
+    nextTick(() => {
+      lenis.scrollTo(newHash, { offset: -100 })
+    })
+  }
+})
+
+onUnmounted(() => {
+  if (lenis) {
+    if (lenis._updateLenis) {
+      import('gsap').then(({ gsap }) => {
+        gsap.ticker.remove(lenis._updateLenis)
+      })
+    }
+    lenis.destroy()
+    lenis = null
+  }
 })
 </script>
 

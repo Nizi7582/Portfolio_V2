@@ -10,10 +10,32 @@
 }
 
 @layer base {
-  body {
-    @apply bg-[#0f172a] text-slate-200 selection:bg-emerald-500/30 font-mono tracking-wide;
-    scroll-behavior: smooth;
-  }
+/* --- FINAL CUSTOM CURSOR SYSTEM --- */
+/* Base Arrow for everything */
+* {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%2310b981' d='M4 0l16 12.279-6.78 1.138 4.256 8.676-3.902 1.907-4.281-8.758L4 19.771z'/%3E%3C/svg%3E") 0 0, auto !important;
+}
+
+/* Emerald Pointer for interactive items */
+a, button, [role="button"], .cursor-pointer, .desk-item, .desk-cursor, input[type="submit"], input[type="button"] {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%2310b981' d='M18 11V6a2 2 0 0 0-4 0v5h-1V4a2 2 0 0 0-4 0v7H8V7a2 2 0 0 0-4 0v10a7 7 0 0 0 14 0v-6z'/%3E%3C/svg%3E") 10 0, pointer !important;
+}
+
+/* Emerald I-beam for text */
+p, span, h1, h2, h3, h4, li, input:not([type="submit"]):not([type="button"]), textarea, label {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%2310b981' d='M15 5h-2v14h2v2H9v-2h2V5H9V3h6v2z'/%3E%3C/svg%3E") 12 12, text !important;
+}
+
+/* FORCED RESET: ensure everything inside a clickable item uses the pointer */
+a, button, [role="button"], .cursor-pointer, .desk-item, .desk-cursor, a *, button *, [role="button"] *, .cursor-pointer *, .desk-item *, .desk-cursor * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%2310b981' d='M18 11V6a2 2 0 0 0-4 0v5h-1V4a2 2 0 0 0-4 0v7H8V7a2 2 0 0 0-4 0v10a7 7 0 0 0 14 0v-6z'/%3E%3C/svg%3E") 10 0, pointer !important;
+}
+
+/* Fix for disabled state (loading) */
+button:disabled, .disabled {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%2310b981' d='M4 0l16 12.279-6.78 1.138 4.256 8.676-3.902 1.907-4.281-8.758L4 19.771z'/%3E%3C/svg%3E") 0 0, wait !important;
+}
+
 
   h1, h2, h3, h4 {
     @apply font-bold tracking-tight text-white;

@@ -6,37 +6,92 @@
     "resume": "Check my Resume"
   },
   "about": {
-    "title": "About Me",
+    "title": "My Workspace",
     "subtitle": "A sneak peek into my life and passions.",
+    "deskPhone": "About Me",
+    "deskTablet": "My Skills",
+    "deskPc": "My Projects",
     "stats": {
       "location": "French developer",
       "locationSub": "Ready to code",
-      "age": "19 years old",
+      "age": "21 years old",
       "ageSub": "Age",
-      "games": "Games lovers",
-      "gamesSub": "Level Up",
       "tech": "Tech Stack",
-      "techSub": "Vue / Nuxt / Tailwind"
+      "techSub": "Vue / Nuxt / Tailwind",
+      "locationLabel": "Location",
+      "locationValue": "France / Remote",
+      "ageLabel": "Age",
+      "expLabel": "Years Exp",
+      "projectsLabel": "Projects"
     },
     "passionTitle": "My Passion",
     "passion1": "I'm a 21's years old guy living in France. I was always interested in IT, but decided to make it my life after discovering the web universe.",
     "passion2": "Ready to learn anything to reach the best possible result. Known as cheerful, i always seek the fun in everything",
-    "greeting": "Hello! 👋"
+    "greeting": "Hello! 👋",
+    "skillsIntro": "Here are the skills I've acquired through my personal and professional experiences.",
+    "deskHint": "Select a device to interact",
+    "backToDesk": "Back to desk",
+    "projectsIntro": "A selection of my recent works and experiments."
   },
   "projects": {
     "title": "My Projects",
     "subtitle": "A selection of my recent works and experiments.",
-    "preview": "Preview"
+    "preview": "Preview",
+    "jexplore": {
+      "description": "Jexplore combines immersive technology and inclusive pedagogy to make career orientation more accessible. The platform manages multimedia content interconnected with a VR app for 360° professional immersions."
+    },
+    "epouvante": {
+      "description": "The House of Horror is a community and e-commerce platform for horror enthusiasts to buy, sell, and trade creepy collectibles. (Fictional project)"
+    },
+    "dropkit": {
+      "description": "Dropkit is a Cloudshipping platform allowing e-retailers to source major brand products without managing stock or logistics."
+    },
+    "unsac": {
+      "description": "UnSacPourTous is a solidarity platform for personalizing unique tote bags, donating a portion of profits to charities."
+    },
+    "troi": {
+      "description": "Troi is an advanced SaaS ATS and CRM solution optimizing the recruitment cycle through X-Ray sourcing and automated scheduling."
+    },
+    "gachat": {
+      "description": "Gachat is a card-based adventure Gacha game. The goal was also to test the evolution of generative AI in image generation."
+    },
+    "allocasions": {
+      "description": "Allocasions secures second-hand vehicle purchases by digitizing the entire appraisal process, from photos to e-signatures."
+    },
+    "drawin": {
+      "description": "Drawin is a creative platform for making and sharing high-quality drawings via an intuitive tool. (Fictional project)"
+    },
+    "getafish": {
+      "description": "GetAFish is an e-commerce platform specializing in selling fish online. (Fictional project)"
+    },
+    "visitLive": "Visit Live"
+  },
+  "skills": {
+    "title": "Skill Tree",
+    "subtitle": "Abilities unlocked through experience."
   },
   "footer": {
-    "copyright": "Built with Passion & Nuxt 3."
+    "copyright": "Built with Nuxt 3."
   },
   "nav": {
-    "projects": "Projects",
-    "about": "About",
+    "home": "Home",
+    "workspace": "Workspace",
     "contact": "Contact",
     "close": "Close",
-    "viewProject": "View Project",
+    "menuTitle": "Main Menu",
     "escTroll": "You really thought the ESC key worked to close the menu? Well too bad, stick with your mouse."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Got a project in mind? A question? Don't hesitate to reach out.",
+    "subject": "Subject",
+    "email": "Your Email",
+    "message": "Your Message",
+    "send": "Send Message",
+    "or": "or find me on"
+  },
+  "skills": {
+    "title": "Skill Tree",
+    "subtitle": "Abilities unlocked through experience."
   }
 }

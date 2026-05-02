@@ -6,37 +6,88 @@
     "resume": "Voir mon CV"
   },
   "about": {
-    "title": "À propos de moi",
+    "title": "Mon espace de travail",
     "subtitle": "Un aperçu de ma vie et de mes passions.",
+    "deskPhone": "À propos",
+    "deskTablet": "Mes Skills",
+    "deskPc": "Mes Projets",
     "stats": {
       "location": "Développeur Français",
       "locationSub": "Prêt à coder",
-      "age": "19 ans",
+      "age": "21 ans",
       "ageSub": "Âge",
-      "games": "Passionné de jeux",
-      "gamesSub": "Niveau Supérieur",
       "tech": "Technologies",
-      "techSub": "Vue / Nuxt / Tailwind"
+      "techSub": "Vue / Nuxt / Tailwind",
+      "locationLabel": "Localisation",
+      "locationValue": "France / Télétravail",
+      "ageLabel": "Âge",
+      "expLabel": "Années Exp",
+      "projectsLabel": "Projets"
     },
     "passionTitle": "Ma Passion",
-    "passion1": "Je suis un jeune de 21 ans vivant en France. J'ai toujours été intéressé par l'informatique, mais j'ai décidé d'en faire ma vie après avoir découvert l'univers du web.",
-    "passion2": "Prêt à tout apprendre pour atteindre le meilleur résultat possible. Connu pour ma bonne humeur, je cherche toujours le côté amusant dans chaque chose.",
-    "greeting": "Bonjour! 👋"
+    "passion1": "Jeune homme de 21 ans vivant en France. J'ai toujours été intéressé par l'informatique, mais j'ai décidé d'en faire ma vie après avoir découvert l'univers du web.",
+    "passion2": "Prêt à tout apprendre pour atteindre le meilleur résultat possible. Connu pour mon sérieux et ma bonne humeur, je cherche toujours le côté amusant dans chaque chose.",
+    "greeting": "Bonjour! 👋",
+    "skillsIntro": "Voici les compétences que j'ai pu acquérir au cours de mes expériences personnelles et professionnelles.",
+    "deskHint": "Sélectionnez un appareil pour interagir",
+    "backToDesk": "Retour au bureau",
+    "projectsIntro": "Une sélection de certains de mes projets et expérimentations."
   },
   "projects": {
     "title": "Mes Projets",
-    "subtitle": "Une sélection de mes récents travaux et expérimentations.",
-    "preview": "Aperçu"
+    "subtitle": "Une sélection de certains de mes projets et expérimentations.",
+    "preview": "Aperçu",
+    "jexplore": {
+      "description": "Jexplore combine technologie immersive et pédagogie inclusive pour rendre l'orientation plus accessible. La plateforme gère des contenus multimédias interconnectés à une application VR permettant de visualiser des immersions professionnelles à 360°."
+    },
+    "epouvante": {
+      "description": "La Maison de l'Épouvante est une plateforme communautaire et e-commerce dédiée aux passionnés d'horreur, permettant d'acheter, de vendre et d'échanger des objets de collection effrayants. (Projet fictif)"
+    },
+    "dropkit": {
+      "description": "Dropkit est une plateforme de Cloudshipping permettant aux e-commerçants de sourcer des produits de grandes marques sans gérer de stock ni de logistique."
+    },
+    "unsac": {
+      "description": "UnSacPourTous est une plateforme solidaire de personnalisation de tote bags uniques, reversant une partie des bénéfices à des associations."
+    },
+    "troi": {
+      "description": "Troi est une solution SaaS ATS et CRM avancée optimisant le cycle de recrutement via le sourcing X-Ray et l'automatisation des entretiens."
+    },
+    "gachat": {
+      "description": "Gachat est un jeu d'aventure de type Gacha basé sur l'invocation de cartes. L'objectif était également de tester l'évolution de l'IA générative sur la génération d'images."
+    },
+    "allocasions": {
+      "description": "Allocasions sécurise l'achat de véhicules d'occasion en numérisant tout le processus d'expertise, de la photo à la signature électronique."
+    },
+    "drawin": {
+      "description": "Drawin est une plateforme créative permettant de réaliser et partager des dessins de qualité via un outil intuitif. (Projet fictif)"
+    },
+    "getafish": {
+      "description": "GetAFish est une plateforme e-commerce spécialisée dans la vente de poissons en ligne. (Projet fictif)"
+    },
+    "visitLive": "Accéder au site"
   },
   "footer": {
-    "copyright": "Créé avec Passion & Nuxt 3."
+    "copyright": "Créé avec Nuxt 3."
   },
   "nav": {
-    "projects": "Projets",
-    "about": "À propos",
+    "home": "Accueil",
+    "workspace": "Mon Espace",
     "contact": "Contact",
     "close": "Fermer",
-    "viewProject": "Voir le Projet",
+    "menuTitle": "Menu Principal",
     "escTroll": "Tu pensais vraiment que la touche ECHAP allait fermer le menu ? Et ben non, va falloir utiliser la souris !"
+  },
+  "contact": {
+    "title": "Me Contacter",
+    "subtitle": "Un projet en tête ? Une question ? N'hésitez pas à me contacter.",
+    "subject": "Objet",
+    "email": "Votre Email",
+    "message": "Votre Message",
+    "send": "Envoyer le message",
+    "or": "ou retrouvez-moi sur"
+  },
+  "skills": {
+    "title": "Mes Compétences",
+    "subtitle": "Capacités débloquées par l'expérience."
   }
 }

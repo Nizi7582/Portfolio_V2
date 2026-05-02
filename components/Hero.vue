@@ -59,10 +59,10 @@ onMounted(async () => {
 </script>
 
 <template>
-  <section class="relative min-h-screen flex items-center justify-center p-6 overflow-hidden">
+  <section class="relative min-h-screen flex items-center justify-center p-6">
     <!-- Animated background elements are handled in app.vue now, but keep subtle hints -->
 
-    <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+    <div class="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-8 lg:gap-8 items-center relative z-10">
       
       <!-- Terminal HUD Text -->
       <div class="space-y-8 text-center lg:text-left border-l-2 border-emerald-500/50 pl-6 lg:pl-10 relative">
@@ -104,8 +104,8 @@ onMounted(async () => {
       </div>
 
       <!-- Character Portrait HUD -->
-      <div class="hero-img-anim relative flex justify-center lg:justify-end mt-12 lg:mt-0">
-        <div class="relative w-72 lg:w-96 aspect-[3/4]">
+      <div class="hero-img-anim relative flex justify-center lg:justify-center mt-8 lg:mt-0">
+        <div class="relative w-72 lg:w-96 xl:w-[450px] aspect-[3/4] max-h-[75vh]">
           <!-- Target Crosshairs -->
           <div class="absolute -top-4 -left-4 w-8 h-8 border-t-2 border-l-2 border-emerald-500 z-20"></div>
           <div class="absolute -top-4 -right-4 w-8 h-8 border-t-2 border-r-2 border-emerald-500 z-20"></div>
@@ -115,14 +115,13 @@ onMounted(async () => {
           <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent z-10 border border-emerald-500/30"></div>
           
           <div class="w-full h-full relative overflow-hidden bg-emerald-900/20">
-            <!-- Scanline Overlay -->
-            <div class="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.2)_50%)] bg-[length:100%_4px] pointer-events-none z-10 mix-blend-overlay"></div>
-            <div class="absolute inset-0 bg-emerald-500/10 mix-blend-color z-10"></div>
+            <!-- Scanline Overlay (keep subtle scanlines but remove color tints) -->
+            <div class="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.1)_50%)] bg-[length:100%_4px] pointer-events-none z-10 mix-blend-overlay"></div>
             
             <img 
-              src="/img/Nizaar_serious.jpg" 
+              src="/img/Nizaar_goat.jpeg" 
               alt="Nizaar Znagui" 
-              class="w-full h-full object-cover grayscale mix-blend-luminosity opacity-80"
+              class="w-full h-full object-cover"
             />
           </div>
 
