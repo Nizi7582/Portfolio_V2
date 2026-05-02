@@ -94,7 +94,12 @@ onMounted(async () => {
         </p>
 
         <div class="hero-text-anim flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-4">
-          <a href="https://cv-nizaarznagui.tiiny.site" target="_blank" class="btn-primary group shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+          <a 
+            href="/documents/CV_Nizaar_Znagui_2026.pdf" 
+            target="_blank" 
+            style="cursor: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'24\' height=\'24\' viewBox=\'0 0 24 24\'%3E%3Cpath fill=\'%2310b981\' d=\'M18 11V6a2 2 0 0 0-4 0v5h-1V4a2 2 0 0 0-4 0v7H8V7a2 2 0 0 0-4 0v10a7 7 0 0 0 14 0v-6z\'/%3E%3C/svg%3E') 10 0, pointer !important;"
+            class="btn-primary group shadow-[0_0_15px_rgba(16,185,129,0.3)] !cursor-pointer"
+          >
             <span class="mr-3 opacity-50"><</span> 
             [ {{ $t('hero.resume') }} ] 
             <span class="ml-3 opacity-50">></span>

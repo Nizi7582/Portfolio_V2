@@ -53,7 +53,7 @@ const menuItems = computed(() => [
       
       <div class="flex items-center gap-6 relative">
         <button @click="toggleLocale" class="text-emerald-500 hover:text-white font-mono font-bold uppercase transition cursor-pointer text-sm tracking-widest bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/30 hover:bg-emerald-500/30">
-          {{ locale === 'en' ? 'FR' : 'EN' }}
+          {{ locale === 'en' ? 'EN' : 'FR' }}
         </button>
         <button @click="isOpen = !isOpen" class="text-white hover:text-emerald-400 transition cursor-pointer hover:drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]" aria-label="Menu">
           <Menu v-if="!isOpen" :size="28" />
