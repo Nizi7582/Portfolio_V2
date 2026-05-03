@@ -50,7 +50,7 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: 'https://nizaarznagui.fr/img/og-image.png' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
         { rel: 'canonical', href: 'https://nizaarznagui.fr' }
       ]
     }
